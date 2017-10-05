@@ -1,0 +1,121 @@
+{
+	"variables": [],
+	"info": {
+		"name": "service-logs",
+		"_postman_id": "49020645-b9f2-ec9f-0b81-bd280f3e1d30",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "logs index",
+			"request": {
+				"url": "localhost:3000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logs /test",
+			"request": {
+				"url": "localhost:3000/test",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"level\": \"debug\",\n\t\t\"module\": \"users\",\n\t\t\"message\": \"user login\",\n\t\t\"meta\": {\n\t\t\t\"user_id\": \"123456\"\n\t\t},\n\t\t\"created\": \"2017-10-05 11:33:00\",\n\t\t\"request_id\": \"11223344\",\n\t\t\"visitor_id\": \"55443322\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logs /logs/1 list",
+			"request": {
+				"url": "localhost:3000/logs/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logs /logs/1 create",
+			"request": {
+				"url": "localhost:3000/logs/1",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"level\": \"debug\",\n\t\t\"module\": \"users\",\n\t\t\"message\": \"user login\",\n\t\t\"meta\": {\n\t\t\t\"user_id\": \"123456\"\n\t\t},\n\t\t\"created\": \"2017-10-05 11:33:30\",\n\t\t\"request_id\": \"11223346\",\n\t\t\"visitor_id\": \"55443322\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logs /logs/1/log-id retrieve",
+			"request": {
+				"url": "localhost:3000/logs/1/59d6a739975f8d02ab461870",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"level\": \"debug\",\n\t\t\"module\": \"users\",\n\t\t\"message\": \"user login\",\n\t\t\"meta\": {\n\t\t\t\"user_id\": \"12345600\"\n\t\t},\n\t\t\"created\": \"2017-10-05 11:33:20\",\n\t\t\"request_id\": \"11223346\",\n\t\t\"visitor_id\": \"55443322\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logs /logs/1/log-id update",
+			"request": {
+				"url": "localhost:3000/logs/1/59d6a739975f8d02ab461870",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"level\": \"debug\",\n\t\t\"module\": \"users\",\n\t\t\"message\": \"user login\",\n\t\t\"meta\": {\n\t\t\t\"user_id\": \"12345600\"\n\t\t},\n\t\t\"created\": \"2017-10-05 11:33:20\",\n\t\t\"request_id\": \"11223346\",\n\t\t\"visitor_id\": \"55443322\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logs /logs/1/log-id delete",
+			"request": {
+				"url": "localhost:3000/logs/1/59d6a9be17e2ce02b9b1ead5",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
